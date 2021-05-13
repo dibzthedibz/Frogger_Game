@@ -255,7 +255,7 @@ namespace FeelingFroggy
             Console.Write(" ");
             x--;
             Console.SetCursorPosition(x, y);
-            Console.Write("<");
+            Console.Write("<<");
 
         }
 

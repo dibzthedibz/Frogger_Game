@@ -10,7 +10,11 @@ namespace FeelingFroggy
     {
         static void Main(string[] args)
         {
+
             Game newGame = new Game();
+            newGame.MenuScreen();
+            newGame.PreGameSplashScreen();
+            newGame.InstructionScreen();
             newGame.Start();
                
         }

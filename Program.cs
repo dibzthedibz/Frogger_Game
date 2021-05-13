@@ -12,9 +12,10 @@ namespace FeelingFroggy
         {
 
             Game newGame = new Game();
-            newGame.MenuScreen();
-            newGame.PreGameSplashScreen();
+            newGame.SetScreenSize();
+            newGame.MenuScreen();            
             newGame.InstructionScreen();
+            newGame.PreGameSplashScreen();
             newGame.Start();
                
         }

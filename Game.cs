@@ -121,7 +121,7 @@ namespace FeelingFroggy
 
                     CarLane1.PosX += 1;             //  lower the speed the lower the times it will hit 
                     CollisionCheck(CarLane1.PosX, CarLane1.PosY);
-                    if (CarLane1.PosX > 15) { CarLane1.PosX = 0; }
+                    if (CarLane1.PosX > 14) { CarLane1.PosX = 0; }
                 }
                 else CarLane1.Stay(CarLane1.PosX, CarLane1.PosY, CarLane1.Car);
 
@@ -131,7 +131,7 @@ namespace FeelingFroggy
                     CarLane2.MoveLeft(CarLane2.PosX, CarLane2.PosY);
                     CarLane2.PosX -= 1;
                     CollisionCheck(CarLane2.PosX, CarLane2.PosY);
-                    if (CarLane2.PosX <= 2) { CarLane2.PosX = 15; }
+                    if (CarLane2.PosX <= 0) { CarLane2.PosX = 15; }
                 }
                 else CarLane2.Stay(CarLane2.PosX, CarLane2.PosY, CarLane2.Car);
 
@@ -141,7 +141,7 @@ namespace FeelingFroggy
                     CarLane3.MoveRight(CarLane3.PosX, CarLane3.PosY);
                     CarLane3.PosX += 1;
                     CollisionCheck(CarLane3.PosX, CarLane3.PosY);
-                    if (CarLane3.PosX > 15) { CarLane3.PosX = 0; }
+                    if (CarLane3.PosX > 14) { CarLane3.PosX = 0; }
                 }
                 else CarLane3.Stay(CarLane3.PosX, CarLane3.PosY, CarLane3.Car);
 
@@ -151,7 +151,7 @@ namespace FeelingFroggy
                     CarLane4.MoveRight(CarLane4.PosX, CarLane4.PosY);
                     CarLane4.PosX += 1;
                     CollisionCheck(CarLane4.PosX, CarLane4.PosY);
-                    if (CarLane4.PosX > 15) { CarLane4.PosX = 0; }
+                    if (CarLane4.PosX > 14) { CarLane4.PosX = 0; }
                 }
                 else CarLane4.Stay(CarLane4.PosX, CarLane4.PosY, CarLane4.Car);
 
@@ -161,7 +161,7 @@ namespace FeelingFroggy
                     CarLane5.MoveLeft(CarLane5.PosX, CarLane5.PosY);
                     CarLane5.PosX -= 1;
                     CollisionCheck(CarLane5.PosX, CarLane5.PosY);
-                    if (CarLane5.PosX <= 2) { CarLane5.PosX = 15; }
+                    if (CarLane5.PosX <= 0) { CarLane5.PosX = 15; }
                 }
                 else CarLane5.Stay(CarLane5.PosX, CarLane5.PosY, CarLane5.Car);
 
@@ -171,7 +171,7 @@ namespace FeelingFroggy
                     CarLane6.MoveRight(CarLane6.PosX, CarLane6.PosY);
                     CarLane6.PosX += 1;
                     CollisionCheck(CarLane6.PosX, CarLane6.PosY);
-                    if (CarLane6.PosX > 15) { CarLane6.PosX = 0; }
+                    if (CarLane6.PosX > 14) { CarLane6.PosX = 0; }
                 }
                 else CarLane6.Stay(CarLane6.PosX, CarLane6.PosY, CarLane6.Car);
 

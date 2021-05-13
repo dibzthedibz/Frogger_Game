@@ -25,13 +25,28 @@ namespace FeelingFroggy
             {
                 for (int x = 0; x < Cols; x++)
                 {
-                    
+                    //Console.CursorVisible = false;
+                    //Console.ForegroundColor = ConsoleColor.Blue;
                     string element = Grid[y, x];
                     Console.SetCursorPosition(x, y);
                     Console.Write(element);
+                    //Console.ForegroundColor = ConsoleColor.DarkGreen;
+                    //Console.SetCursorPosition(3,1);
+                    //Console.Write("$");
+                    //Console.SetCursorPosition(4,1);
+                    //Console.Write("$");
+                    //Console.SetCursorPosition(7,1);
+                    //Console.Write("$");
+                    //Console.SetCursorPosition(8,1);
+                    //Console.Write("$");
+                    //Console.SetCursorPosition(11,1);
+                    //Console.Write("$");
+                    //Console.SetCursorPosition(12,1);
+                    //Console.Write("$");
+                    //Console.ResetColor();
                 }
             }
-
+            
         }
 
         public bool IsSafe(int x, int y)

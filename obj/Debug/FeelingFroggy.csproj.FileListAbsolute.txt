@@ -12,3 +12,10 @@ S:\Bootcamp Work Folder Boom\ElevenFiftyProjects\Assignments\FroggerGame\BensRep
 S:\Bootcamp Work Folder Boom\ElevenFiftyProjects\Assignments\FroggerGame\BensRepo\FeelingFroggy\obj\Debug\FeelingFroggy.csproj.CoreCompileInputs.cache
 S:\Bootcamp Work Folder Boom\ElevenFiftyProjects\Assignments\FroggerGame\BensRepo\FeelingFroggy\obj\Debug\FeelingFroggy.exe
 S:\Bootcamp Work Folder Boom\ElevenFiftyProjects\Assignments\FroggerGame\BensRepo\FeelingFroggy\obj\Debug\FeelingFroggy.pdb
+C:\Users\bene1\Desktop\ElevenFiftyProjects\Assignments\ConsoleGameFroggerv2\bin\Debug\FeelingFroggy.exe.config
+C:\Users\bene1\Desktop\ElevenFiftyProjects\Assignments\ConsoleGameFroggerv2\bin\Debug\FeelingFroggy.exe
+C:\Users\bene1\Desktop\ElevenFiftyProjects\Assignments\ConsoleGameFroggerv2\bin\Debug\FeelingFroggy.pdb
+C:\Users\bene1\Desktop\ElevenFiftyProjects\Assignments\ConsoleGameFroggerv2\obj\Debug\FeelingFroggy.csprojAssemblyReference.cache
+C:\Users\bene1\Desktop\ElevenFiftyProjects\Assignments\ConsoleGameFroggerv2\obj\Debug\FeelingFroggy.csproj.CoreCompileInputs.cache
+C:\Users\bene1\Desktop\ElevenFiftyProjects\Assignments\ConsoleGameFroggerv2\obj\Debug\FeelingFroggy.exe
+C:\Users\bene1\Desktop\ElevenFiftyProjects\Assignments\ConsoleGameFroggerv2\obj\Debug\FeelingFroggy.pdb

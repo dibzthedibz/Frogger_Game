@@ -17,7 +17,7 @@ namespace FeelingFroggy
         {
             X = initialX;
             Y = initialY;
-            Froggy = "\u03A9";
+            Froggy = "\u03A9"; 
             FrogColor = ConsoleColor.Green;
             Width = width;
         }
@@ -33,7 +33,6 @@ namespace FeelingFroggy
     }
     public class Enemy1
     {
-        private int _speed;
         public int PosX { get; set; }
         public int PosY { get; set; }
         public string Car { get; set; }

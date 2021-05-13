@@ -18,33 +18,8 @@ namespace FeelingFroggy
 
 
         public void Start()
-        {             
-            Console.BufferHeight =
-            Console.BufferHeight = Console.WindowHeight = Window_Height;
-            Console.BufferWidth = Console.WindowWidth = Window_Width;
-            Console.Title = "Feeling Froggy";
-            Console.CursorVisible = false;
-            Console.WriteLine("    Welcome");
-            Console.WriteLine("      To   ");
-            Console.WriteLine("  Ben And Ryan's");
-            Console.WriteLine("  Rendition Of");
-            Console.WriteLine("    Frogger!  ");
-            Console.WriteLine("              ");
-            Console.WriteLine("  Please Press");
-            Console.WriteLine("     Any Key");
-            Console.WriteLine("     To Be");
-            Console.WriteLine("     Amazed");
-            Console.ReadKey();
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("       _  _");
-            Console.WriteLine("       (.)(.)");
-            Console.WriteLine("   ,-.(.____.),-.  ");
-            Console.WriteLine("  (\\ \\ '--' / / )");
-            Console.WriteLine("  \\ \\ / ,.\\ / / ");
-            Console.WriteLine("    ) '| || |' (   ");
-            Console.WriteLine(" oO'- OoO''OoO -'Oo");
-            Console.ReadKey();
+        {           
+            
             MyWorld = new World(GetGrid());
             CurrentFrog = new Frog(8, 10, 1);
 
@@ -103,10 +78,10 @@ namespace FeelingFroggy
         {
             Enemy1 CarLane1 = new Enemy1(3, 9, 6, ">", ConsoleColor.Red);
             Enemy2 CarLane2 = new Enemy2(2, 8, 9, ">", ConsoleColor.Red);
-            Enemy3 CarLane3 = new Enemy3(5, 7, 3, "<#>", ConsoleColor.Red);
+            Enemy3 CarLane3 = new Enemy3(5, 7, 4, "<#>", ConsoleColor.Red);
             Enemy4 CarLane4 = new Enemy4(8, 4, 8, "<", ConsoleColor.Red);
-            Enemy5 CarLane5 = new Enemy5(13, 3, 3, "<<", ConsoleColor.Red);
-            Enemy6 CarLane6 = new Enemy6(3, 2, 6, ">", ConsoleColor.Red);
+            Enemy5 CarLane5 = new Enemy5(13, 3, 5, "<<", ConsoleColor.Red);
+            Enemy6 CarLane6 = new Enemy6(3, 2, 7, ">", ConsoleColor.Red);
 
 
             while (true)
@@ -125,7 +100,7 @@ namespace FeelingFroggy
                 }
                 else CarLane1.Stay(CarLane1.PosX, CarLane1.PosY, CarLane1.Car);
 
-                speedCheck = speed.Next(1, 4);
+                speedCheck = speed.Next(0, 10);
                 if (CarLane2.Speed > speedCheck)
                 {
                     CarLane2.MoveLeft(CarLane2.PosX, CarLane2.PosY);
@@ -145,7 +120,7 @@ namespace FeelingFroggy
                 }
                 else CarLane3.Stay(CarLane3.PosX, CarLane3.PosY, CarLane3.Car);
 
-                speedCheck = speed.Next(2, 4);
+                speedCheck = speed.Next(0, 10);
                 if (CarLane4.Speed > speedCheck)
                 {
                     CarLane4.MoveRight(CarLane4.PosX, CarLane4.PosY);
@@ -165,7 +140,7 @@ namespace FeelingFroggy
                 }
                 else CarLane5.Stay(CarLane5.PosX, CarLane5.PosY, CarLane5.Car);
 
-                speedCheck = speed.Next(1, 4);
+                speedCheck = speed.Next(0, 10);
                 if (CarLane6.Speed > speedCheck)
                 {
                     CarLane6.MoveRight(CarLane6.PosX, CarLane6.PosY);
@@ -211,7 +186,8 @@ namespace FeelingFroggy
                 Console.Clear();
                 Console.SetCursorPosition(0, 0);
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("\n\n\n***************OH NO, a bird got you. Better luck next time.**********");
+                Console.WriteLine("OH NO, \na bird got you. \nBetter luck \nnext time.");
+                Console.ReadKey();
                 Console.ResetColor();
                 newgame.Start();
             }

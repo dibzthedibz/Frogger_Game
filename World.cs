@@ -58,8 +58,9 @@ namespace FeelingFroggy
                 Console.Clear();
                 Console.SetCursorPosition(0,0);
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\n\n\n/+=+=+=+=+=You flew off the Map! Game Over+=+=+=+=+=");
+                Console.WriteLine("Youu flew off \nthe Map! \nGame Over");
                 Console.ResetColor();
+                Console.ReadKey();
                 newgame.Start();
                 return false;
             }
@@ -68,8 +69,9 @@ namespace FeelingFroggy
                 Console.Clear();
                 Console.SetCursorPosition(0, 0);
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\n\n\n~~~~~~~~~Congratulations, you WON!!!~~~~~~~~~~~~");
+                Console.WriteLine("Congratulations, \nyou WON!");
                 Console.ResetColor();
+                Console.ReadKey();
                 newgame.Start();
                 return false;
             }

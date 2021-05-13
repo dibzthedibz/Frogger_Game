@@ -18,38 +18,82 @@ namespace FeelingFroggy
 
 
         public void Start()
-        {             
+        {
+            SetScreenSize();
+
+            GameLoop();
+
+        }
+        public void SetScreenSize()
+        {
             Console.BufferHeight =
             Console.BufferHeight = Console.WindowHeight = Window_Height;
             Console.BufferWidth = Console.WindowWidth = Window_Width;
             Console.Title = "Feeling Froggy";
             Console.CursorVisible = false;
+            Console.ForegroundColor = ConsoleColor.Red;
+        }
+        public void MenuScreen()
+        {
             Console.WriteLine("    Welcome");
             Console.WriteLine("      To   ");
             Console.WriteLine("  Ben And Ryan's");
             Console.WriteLine("  Rendition Of");
             Console.WriteLine("    Frogger!  ");
             Console.WriteLine("              ");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("  Please Press");
             Console.WriteLine("     Any Key");
             Console.WriteLine("     To Be");
             Console.WriteLine("     Amazed");
             Console.ReadKey();
             Console.Clear();
+        }
+        public void InstructionScreen()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("    Arrow Keys");
+            Console.WriteLine("     Move The");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("       Frog");
+            Console.WriteLine("                 ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("  Birds Kill You");
+            Console.WriteLine("  Walls Kill You");
+            Console.ReadKey();
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("    Very Little");
+            Console.WriteLine("      DOESN'T");
+            Console.WriteLine("     Kill You.");
+            Console.WriteLine("                 ");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("       Tread");
+            Console.WriteLine("     Carefully");
+            Console.WriteLine("        But");
+            Console.WriteLine("      Quickly!");
+            Console.ReadKey();
+            Console.Clear();
+
+
+        }
+        public void PreGameSplashScreen()
+        {
+            
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("       _  _");
             Console.WriteLine("       (.)(.)");
             Console.WriteLine("   ,-.(.____.),-.  ");
             Console.WriteLine("  (\\ \\ '--' / / )");
             Console.WriteLine("  \\ \\ / ,.\\ / / ");
-            Console.WriteLine("    ) '| || |' (   ");
+            Console.WriteLine("    ) '| || |' (   ");            
             Console.WriteLine(" oO'- OoO''OoO -'Oo");
+            Console.ResetColor();
+            Console.WriteLine("  Click Ribbit Key");  //could make Ribbit separate string, apply foreground color, then use interpolation to insert into this string to make 
+            Console.WriteLine("    To Continue");
             Console.ReadKey();
-            MyWorld = new World(GetGrid());
-            CurrentFrog = new Frog(8, 10, 1);
-
-            GameLoop();
-
+            Console.Clear();
         }
 
         public void PlayerInput()
@@ -101,12 +145,14 @@ namespace FeelingFroggy
 
         public void GameLoop()
         {
-            Enemy1 CarLane1 = new Enemy1(3, 9, 6, ">", ConsoleColor.Red);
-            Enemy2 CarLane2 = new Enemy2(2, 8, 9, ">", ConsoleColor.Red);
-            Enemy3 CarLane3 = new Enemy3(5, 7, 3, "<#>", ConsoleColor.Red);
-            Enemy4 CarLane4 = new Enemy4(8, 4, 8, "<", ConsoleColor.Red);
-            Enemy5 CarLane5 = new Enemy5(13, 3, 3, "<<", ConsoleColor.Red);
-            Enemy6 CarLane6 = new Enemy6(3, 2, 6, ">", ConsoleColor.Red);
+            MyWorld = new World(GetGrid());
+            CurrentFrog = new Frog(8, 10, 1);
+            Enemy1 CarLane1 = new Enemy1(3, 9, 6, ">", ConsoleColor.Blue);
+            Enemy2 CarLane2 = new Enemy2(2, 8, 9, ">", ConsoleColor.Blue);
+            Enemy3 CarLane3 = new Enemy3(5, 7, 3, "<#>", ConsoleColor.Blue);
+            Enemy4 CarLane4 = new Enemy4(8, 4, 8, "<", ConsoleColor.Blue);
+            Enemy5 CarLane5 = new Enemy5(13, 3, 3, "<<", ConsoleColor.Blue);
+            Enemy6 CarLane6 = new Enemy6(3, 2, 6, ">", ConsoleColor.Blue);
 
 
             while (true)
@@ -185,7 +231,7 @@ namespace FeelingFroggy
 
         public string[,] GetGrid()
         {
-            
+
             string[,] grid = {
                 {"|" , "~" , "~" , "~" , "~" , "~" , "~" , "~" , "~" , "~" ,"~" , "~" , "~" , "~" , "~" , "|" }, //  16x12
                 {"|" , "=" , "=" , "$" , "$" , "=" , "=" , "$" , "$" , "=" ,"=" , "$" , "$" , "=" , "=" , "|" }, // End
